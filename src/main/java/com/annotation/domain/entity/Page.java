@@ -2,7 +2,7 @@ package com.annotation.domain.entity;
 
 import java.util.List;
 
-public class Page<K> {
+public class Page<K extends BaseEntity<?>> {
     private List<K> values;
     private int pageSize;
     private int pageIndex;
