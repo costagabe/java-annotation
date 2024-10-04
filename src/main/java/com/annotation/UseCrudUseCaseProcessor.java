@@ -44,12 +44,12 @@ public class UseCrudUseCaseProcessor extends AbstractProcessor {
 
             String className = annotatedClasses.stream().findAny().get().toString();
 
-            try {
-                writeUseCaseDependencies("com.annotation.domain.entity.BaseEntity", generateBaseEntity());
-                writeUseCaseDependencies("com.annotation.domain.entity.Page", generatePageEntity());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+//            try {
+////                writeUseCaseDependencies("com.annotation.domain.entity.BaseEntity", generateBaseEntity());
+////                writeUseCaseDependencies("com.annotation.domain.entity.Page", generatePageEntity());
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
         }
 
         return true;

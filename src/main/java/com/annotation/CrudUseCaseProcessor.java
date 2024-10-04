@@ -40,6 +40,10 @@ public class CrudUseCaseProcessor extends AbstractProcessor {
         String useCaseFile = MessageFormat.format("""
                 package com.annotation.domain.usecase;
                 
+                import com.annotation.domain.entity.BaseEntity;
+                import com.annotation.domain.entity.Page;
+                import com.annotation.domain.entity.Pageable;
+                
                 import {0};
                 import java.util.List;
                 import java.util.UUID;
@@ -50,6 +54,7 @@ public class CrudUseCaseProcessor extends AbstractProcessor {
                    {1} update({1} {2});
                    void delete({1} {2});
                    List<{1}> findAll();
+                   Page<{1}> findAll(Pageable pageable);
                    Optional<{1}> findById(UUID id);
                 '}'
                 """, className, simpleName, toCamelCase(simpleName));
